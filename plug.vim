@@ -45,6 +45,10 @@ if has("nvim")
     Plug 'ahmedkhalf/jupyter-nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'noib3/nvim-cokeline'
     Plug 'glepnir/dashboard-nvim'
+    " Vim everywhere in browser
+    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " Plug for thin vertical column
+    Plug 'davepinto/virtual-column.nvim'
 endif
 
 call plug#end()

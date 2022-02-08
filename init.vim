@@ -33,12 +33,13 @@ set clipboard=unnamed
 set ruler
 
 set guifont=MesloLGSDZ\ Nerd\ Font\ Mono
-set colorcolumn=80
+" set colorcolumn=80
 
 " incremental substitution (neovim)
 if has('nvim')
   set inccommand=split
 endif
+
 
 " True color 24-bit for tmux
 if exists('+termguicolors')
@@ -190,7 +191,8 @@ let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a 
 highlight Comment cterm=italic gui=italic
 
 set shell=/usr/local/bin/fish
-
+set guifont=Iosevka:h16
+hi VirtualColumn guifg=#2F3037
 
 " set listchars=tab:,trail:
 " set listchars=tab:,trail:
