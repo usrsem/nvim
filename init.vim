@@ -1,6 +1,3 @@
-" Fundamentals "{{{
-" ---------------------------------------------------------------------
-
 " init autocmd
 autocmd!
 " set script encoding
@@ -192,6 +189,7 @@ highlight Comment cterm=italic gui=italic
 
 set shell=/usr/local/bin/fish
 set guifont=Iosevka:h16
+" Set color for vertical colorcolumn
 hi VirtualColumn guifg=#2F3037
 
 " set listchars=tab:,trail:

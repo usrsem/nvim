@@ -34,7 +34,7 @@ if has("nvim")
     " Git plugins
     Plug 'lewis6991/gitsigns.nvim' " show git signs on lines in file
 
-    " Plug 'windwp/nvim-autopairs' " smart pairs
+    Plug 'windwp/nvim-autopairs' " smart pairs
     Plug 'mfussenegger/nvim-jdtls' " java lsp
     Plug 'folke/trouble.nvim' " diagnostics list
     " Plug 'folke/zen-mode.nvim'
@@ -42,13 +42,20 @@ if has("nvim")
     Plug 'sunjon/shade.nvim' " shadow unused windows
     " Has problems with 'Too many files'
     " Plug 'TimUntersberger/neogit'
-    Plug 'ahmedkhalf/jupyter-nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'noib3/nvim-cokeline'
     Plug 'glepnir/dashboard-nvim'
     " Vim everywhere in browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Plug for thin vertical column
     Plug 'davepinto/virtual-column.nvim'
+
+
+    " Jupyter config
+    Plug 'hkupty/iron.nvim'
+    Plug 'kana/vim-textobj-user'
+    Plug 'kana/vim-textobj-line'
+    Plug 'GCBallesteros/vim-textobj-hydrogen'
+    Plug 'GCBallesteros/jupytext.vim'
 endif
 
 call plug#end()
