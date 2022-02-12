@@ -190,7 +190,7 @@ highlight Comment cterm=italic gui=italic
 set shell=/usr/local/bin/fish
 set guifont=Iosevka:h16
 " Set color for vertical colorcolumn
-hi VirtualColumn guifg=#2F3037
+hi VirtualColumn guifg=#BEBEBE
 
 " set listchars=tab:,trail:
 " set listchars=tab:,trail:

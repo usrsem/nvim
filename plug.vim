@@ -22,7 +22,6 @@ if has("nvim")
     Plug 'glepnir/lspsaga.nvim' " better lsp UI
     " Plug 'romgrk/barbar.nvim'
     Plug 'arzg/vim-colors-xcode'
-    Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
     Plug 'kyazdani42/nvim-tree.lua'
     Plug 'ThePrimeagen/vim-be-good'
 
@@ -56,6 +55,9 @@ if has("nvim")
     Plug 'kana/vim-textobj-line'
     Plug 'GCBallesteros/vim-textobj-hydrogen'
     Plug 'GCBallesteros/jupytext.vim'
+
+    " Markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 endif
 
 call plug#end()
