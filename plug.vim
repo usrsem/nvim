@@ -32,6 +32,7 @@ if has("nvim")
 
     " Git plugins
     Plug 'lewis6991/gitsigns.nvim' " show git signs on lines in file
+    Plug 'TimUntersberger/neogit'
 
     Plug 'windwp/nvim-autopairs' " smart pairs
     Plug 'mfussenegger/nvim-jdtls' " java lsp
