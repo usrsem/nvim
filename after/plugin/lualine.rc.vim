@@ -7,16 +7,27 @@ local lualine = require 'lualine'
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#25262b',
+--  bg       = '#25262b',
+--  fg       = '#D3D3D4',
+--  yellow   = '#ECBE7B',
+--  cyan     = '#008080',
+--  darkblue = '#081633',
+--  green    = '#78c2b3',
+--  orange   = '#FF8800',
+--  violet   = '#a9a1e1',
+--  magenta  = '#c678dd',
+--  blue     = '#105BCA',
+--  red      = '#ec5f67',
+  bg       = '#27282c',
   fg       = '#D3D3D4',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
+  yellow   = '#fac863',
+  cyan     = '#62b3b2',
   darkblue = '#081633',
-  green    = '#78c2b3',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#105BCA',
+  green    = '#99c794',
+  orange   = '#f99157',
+  violet   = '#c594c5',
+  magenta  = '#c594c5',
+  blue     = '#6699cc',
   red      = '#ec5f67',
 }
 
@@ -79,13 +90,13 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+-- ins_left {
+  -- function()
+    -- return '▊'
+  -- end,
+  -- color = { fg = colors.blue }, -- Sets highlighting of component
+  -- padding = { left = 0, right = 1 }, -- We don't need space before this
+-- }
 
 ins_left {
   -- mode component
@@ -209,13 +220,13 @@ ins_right {
   cond = conditions.hide_in_width,
 }
 
-ins_right {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
-}
+--ins_right {
+  --function()
+    --return '▊'
+  --end,
+  --color = { fg = colors.blue },
+  --padding = { left = 1 },
+--}
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)

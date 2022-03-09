@@ -137,15 +137,6 @@ runtime ./maps.vim
 " Syntax theme "{{{
 " ---------------------------------------------------------------------
 
-syntax enable
-" set background=dark
-" let g:onedark_style = 'warm'
-let g:sonokai_style = 'atlantis'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-
-colorscheme xcodedark
-
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
@@ -154,13 +145,13 @@ set exrc
 " vim: set foldmethod=marker foldlevel=0:
 "
 " hi Normal guibg=NONE ctermbg=NONE
-if !exists('g:neovide')
-    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-    hi LineNr guibg=NONE ctermbg=NONE
-    hi SignColumn guibg=NONE ctermbg=NONE
-    hi EndOfBuffer guibg=NONE ctermbg=NONE
-en
-" hi VertSplit guibg=NONE ctermbg=NONE
+" if !exists('g:neovide')
+"     autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+"     hi LineNr guibg=NONE ctermbg=NONE
+"     hi SignColumn guibg=NONE ctermbg=NONE
+"     hi EndOfBuffer guibg=NONE ctermbg=NONE
+" en
+
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
 set splitbelow
@@ -189,53 +180,9 @@ highlight Comment cterm=italic gui=italic
 
 set shell=/usr/local/bin/fish
 set guifont=Iosevka:h16
-" Set color for vertical colorcolumn
-hi VirtualColumn guifg=#BEBEBE
 
-" set listchars=tab:,trail:
-" set listchars=tab:,trail:
-" set listchars=tab:>,trail:-
-"                                        
-"                                        
-"                                        
-"                                        
-"          
-"                                       
-"                                        
-"                                        
-"                                         
-"                                        
-"                                      
-"                                        
-"                                            
-"                                        
-"                                        
-"                                        
-"                                        
-"                                          
-"                                         
-"                                         
-"                                         
-"                                         
-"                                         
-"                                         
-"                                         
-"                                         
-"                                         
-"                                    
-" ♥ ⚡
-"                                         
-"                                         
-"                                        
-"                                         
-"           
-" Pomicons (E000-E00A)
-"            
-" Font Linux (moved F100-F115 with holes → F300-F313)
-"                     
-" Seti-UI + Custom (E5FA-E62B)
-"                                         
-"          
-"
-"         
-"
+syntax enable
+colorscheme OceanicNext
+
+" Set color for vertical colorcolumn
+hi VirtualColumn guifg=#7F8C98

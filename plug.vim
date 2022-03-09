@@ -1,6 +1,11 @@
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
-endif
+    function! UpdateRemotePlugins(...)
+        " Needed to refresh runtime files
+        let &rtp=&rtp
+        UpdateRemotePlugins
+      endfunction
+    endif
 
 call plug#begin()
 
@@ -19,16 +24,20 @@ if has("nvim")
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} "  9k+ snippets
     Plug 'karb94/neoscroll.nvim' " smooth scroll
-    Plug 'glepnir/lspsaga.nvim' " better lsp UI
-    " Plug 'romgrk/barbar.nvim'
+    " THEMES
     Plug 'arzg/vim-colors-xcode'
+    Plug 'shaunsingh/nord.nvim'
     Plug 'kyazdani42/nvim-tree.lua'
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
     Plug 'ThePrimeagen/vim-be-good'
 
     " LSP plugins
     Plug 'neovim/nvim-lspconfig'
     Plug 'sheerun/vim-polyglot' " syntax highlighting
     Plug 'tell-k/vim-autopep8'
+    Plug 'CosmicNvim/cosmic-ui'
+    Plug 'MunifTanjim/nui.nvim'
+
 
     " Git plugins
     Plug 'lewis6991/gitsigns.nvim' " show git signs on lines in file
@@ -43,7 +52,7 @@ if has("nvim")
     " Has problems with 'Too many files'
     " Plug 'TimUntersberger/neogit'
     Plug 'noib3/nvim-cokeline'
-    Plug 'glepnir/dashboard-nvim'
+    " Plug 'glepnir/dashboard-nvim'
     " Vim everywhere in browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Plug for thin vertical column
@@ -51,14 +60,15 @@ if has("nvim")
 
 
     " Jupyter config
-    Plug 'hkupty/iron.nvim'
-    Plug 'kana/vim-textobj-user'
-    Plug 'kana/vim-textobj-line'
-    Plug 'GCBallesteros/vim-textobj-hydrogen'
-    Plug 'GCBallesteros/jupytext.vim'
+    Plug 'jupyter-vim/jupyter-vim'
 
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+    Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'mhinz/vim-startify'
+    Plug 'danilamihailov/beacon.nvim'
+    Plug 'bfredl/nvim-ipy'
 endif
 
 call plug#end()

@@ -23,7 +23,7 @@ map <leader>l :wincmd l<CR>
 nnoremap <F10> :set cursorline!<CR>
 
 " ### NVIM TREE settings
-nnoremap <F2> :NvimTreeToggle<CR>
+nnoremap <F2> :CHADopen<CR>
 nnoremap R :NvimTreeRefresh<CR>
 nnoremap F :NvimTreeFindFile<CR>
 nnoremap <S-C-p> "0p
@@ -113,3 +113,10 @@ nmap <silent> <Tab> :bnext<Return>
 
 " Close buffer
 nnoremap <silent> <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" Jupyter
+" Send a selection of lines
+nnoremap <buffer> <silent> <leader>x :JupyterSendCell<CR>
+nnoremap <buffer> <silent> <leader>e :JupyterSendRange<CR>
+nmap     <buffer> <silent> <leader>e <Plug>JupyterRunTextObj
+vmap     <buffer> <silent> <leader>e <Plug>JupyterRunVisual

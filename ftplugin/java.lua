@@ -8,7 +8,7 @@ local config = {}
 
 config.root_dir = root_dir
 
-config.cmd = { 'java-lsp', workspace_folder }
+config.cmd = { 'java-lsp.sh', workspace_folder }
 
 config.settings = { 
   java = {

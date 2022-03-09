@@ -31,7 +31,6 @@ map("v", "<leader>dm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>"
 
 map("n", "<leader>cf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
--- map("n", "<leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-map("n", "<leader>ca", "<Cmd>lua require('jdtls').code_action()<CR>", opts)
-map("v", "<leader>ca", "<Esc><Cmd>lua require('jdtls').code_action(true)<CR>", opts)
-map("n", "<leader>cA", "<Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>", opts)
+map("n", "<leader>ja", "<Cmd>lua require('jdtls').code_action()<CR>", opts)
+map("v", "<leader>ja", "<Esc><Cmd>lua require('jdtls').code_action(true)<CR>", opts)
+map("n", "<leader>jA", "<Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>", opts)
